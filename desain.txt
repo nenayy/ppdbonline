@@ -1,0 +1,84 @@
+Oke 👍 saya buatkan narasi desain aplikasi PPDB Online SMP Negeri 1 Wanadadi berbasis PHP & MySQL (database: ppdbonline) sesuai permintaan, tanpa script PHP dan SQL, hanya berupa desain/konsep.
+________________________________________
+1. Struktur Database (Konseptual)
+Database: ppdbonline
+Tabel utama yang dibutuhkan:
+•	calon_siswa → menyimpan data pendaftaran.
+•	admin → menyimpan data login admin.
+•	pengumuman → menyimpan status hasil seleksi (diterima/ditolak).
+•	jurnal_pendaftaran → mencatat urutan/ranking nilai siswa.
+________________________________________
+2. Desain Halaman Frontend (Untuk Calon Siswa)
+a. Halaman Utama
+•	Informasi umum PPDB SMP Negeri 1 Wanadadi.
+•	Jadwal pendaftaran.
+•	Persyaratan jalur penerimaan.
+•	Tombol navigasi → Daftar Sekarang, Cek Pengumuman.
+b. Halaman Formulir Pendaftaran
+Form berisi:
+•	Nomor Pendaftaran (otomatis ter-generate).
+•	Nama Lengkap.
+•	NISN.
+•	Tempat/Tanggal Lahir.
+•	Asal Sekolah.
+•	Alamat.
+•	Nomor HP/Email.
+•	Jalur Pendaftaran:
+o	Prestasi Akademik (nilai rapot rata-rata).
+o	Prestasi Non-akademik (sertifikat lomba).
+o	Afirmasi (unggah bukti KIP / surat keterangan tidak mampu).
+•	Upload dokumen (ijazah/raport/sertifikat).
+•	Tombol Submit untuk menyimpan data.
+c. Halaman Cek Pengumuman
+•	Input: Nomor Pendaftaran.
+•	Output: Status hasil seleksi → DITERIMA / DITOLAK.
+•	Jika diterima → tampilkan peringkat/ranking.
+________________________________________
+3. Desain Halaman Backend (Admin)
+a. Halaman Login
+•	Username + Password.
+•	Autentikasi untuk masuk ke sistem.
+b. Dashboard Admin
+Fitur utama:
+1.	Kelola Data Pendaftaran
+o	Lihat daftar semua calon siswa.
+o	Fitur edit/hapus data pendaftar.
+o	Filter berdasarkan jalur pendaftaran (Prestasi/Afirmasi).
+2.	Verifikasi Dokumen
+o	Admin memverifikasi dokumen yang diunggah (raport, sertifikat, KIP).
+o	Status verifikasi: Valid / Tidak Valid.
+3.	Seleksi & Ranking
+o	Admin bisa menginput nilai seleksi.
+o	Sistem membuat ranking berdasarkan kriteria (misalnya nilai raport, prestasi, afirmasi).
+o	Ranking otomatis tersimpan ke tabel jurnal_pendaftaran.
+4.	Penentuan Status (Diterima/Ditolak)
+o	Admin menetapkan status siswa → diterima/ditolak.
+o	Data otomatis masuk ke tabel pengumuman.
+5.	Kelola Pengumuman
+o	Admin mengatur pengumuman online.
+o	Siswa bisa cek status dengan Nomor Pendaftaran.
+________________________________________
+4. Alur Sistem
+1.	Siswa mendaftar → mengisi formulir online.
+2.	Data tersimpan → masuk database ppdbonline.
+3.	Admin login → memverifikasi data & dokumen.
+4.	Admin memberi nilai → sistem menghitung ranking berdasarkan jalur.
+5.	Admin menentukan hasil → Diterima atau Ditolak.
+6.	Pengumuman dipublikasikan → siswa cek hasil dengan Nomor Pendaftaran.
+________________________________________
+5. Desain Jurnal Pendaftaran (Ranking)
+•	Berisi daftar siswa sesuai urutan ranking.
+•	Kolom: Nomor Pendaftaran, Nama, Jalur Pendaftaran, Nilai/Raport, Ranking, Status (Diterima/Ditolak).
+•	Ditampilkan khusus di backend, bisa di-export (Excel/PDF).
+________________________________________
+6. User Role
+•	Siswa/Calon Peserta: hanya bisa daftar & cek pengumuman.
+•	Admin PPDB: bisa verifikasi, mengatur ranking, menentukan diterima/ditolak, mengatur pengumuman.
+________________________________________
+👉 Jadi aplikasi ini secara garis besar dibagi 3 modul:
+1.	Frontend Pendaftaran & Pengumuman (untuk siswa).
+2.	Backend Pengelolaan Pendaftaran (untuk admin).
+3.	Jurnal Ranking (untuk perhitungan nilai & urutan seleksi).
+________________________________________
+Mau saya buatkan juga mockup/gambar UI sederhana (seperti wireframe) agar lebih jelas tampilan tiap halamannya?
+
